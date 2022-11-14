@@ -2,7 +2,7 @@ import Sequelize from "sequelize";
 
 export default function (sequelize, DataTypes) {
   return sequelize.define(
-    "CustomerList",
+    "Customers",
     {
       id: {
         allowNull: false,

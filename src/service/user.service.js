@@ -1,13 +1,14 @@
 import Models from "../database/sequelize.js";
 import sequelize from "sequelize";
 import moment from "moment";
+// import customers from "../models/customers.js";
 
-const { customerList } = Models;
+const { customers } = Models;
 
 class UserEmailService {
   async getAllCustomerList() {
     try {
-      const result = await customerList.findAll({
+      const result = await customers.findAll({
         attributes: [
           "id",
           "name",
@@ -57,7 +58,7 @@ class UserEmailService {
     dayModified
   ) {
     try {
-      const result = await customerList.create({
+      const result = await customers.create({
         id,
         name,
         phone,

@@ -1,10 +1,10 @@
 import { DataTypes } from "sequelize";
 
-import _customerList from "./customerList.js";
+import _customers from "./customers.js";
 
 export default function initModels(sequelize) {
-  const customerList = _customerList(sequelize, DataTypes);
+  const customers = _customers(sequelize, DataTypes);
   return {
-    customerList,
+    customers,
   };
 }
